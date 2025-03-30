@@ -1,2 +1,2 @@
-# ITEMS
-Add items to a list
+Simple List of Items
+View code at https://catsandcode.org/simple-list
