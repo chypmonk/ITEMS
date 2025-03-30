@@ -35,16 +35,16 @@ session_start();
 
 <?php
 //Prevent to many submissions during session
-if (!isset ($_SESSION['counter'])) { 
-    $_SESSION['counter'] = 0;
+if (!isset ($_SESSION['items-counter'])) { 
+    $_SESSION['items-counter'] = 0;
 }
 $string1 = file_get_contents ('items.txt');
 $array1 = explode (',', $string1);
 
 
 if ($_SERVER ["REQUEST_METHOD"] == "POST" ) {
-    $_SESSION['counter']++;
-    if ($_SESSION['counter'] >= 10) {
+    $_SESSION['items-counter']++;
+    if ($_SESSION['items-counter'] >= 10) {
         echo "<h4>Too many submissions during this session</h4>";
     }
     else {
